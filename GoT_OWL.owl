@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/maike/ontologies/2015/9/got-onthology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/maike/ontologies/2015/9/got-onthology">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Animal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dragon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drowned_God"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Greyscale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#House"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Man"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Old_Gods"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Religion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rhllor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sentient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stark"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wolf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Woman"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#believes_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongs_to_house"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#can_tame"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#can_warg_into"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#cant_contract"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_bastard_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_child_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_father_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_founder_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_lord_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_married_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_mother_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_parent_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#was_founded_by"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#is_dead"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#is_warg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Brandon_The_Builder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Brandon_The_Builder_Wife"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Catelyn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Eddard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hoster_Tully"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Robb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stark"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Man"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_father_of"/>
+                <Class IRI="#Person"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_married_to"/>
+                <Class IRI="#Woman"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Person"/>
+        <Class IRI="#Sentient"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Woman"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_married_to"/>
+                <Class IRI="#Man"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_mother_of"/>
+                <Class IRI="#Person"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Dragon"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Drowned_God"/>
+        <Class IRI="#Religion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Greyscale"/>
+        <Class IRI="#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Man"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Old_Gods"/>
+        <Class IRI="#Religion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rhllor"/>
+        <Class IRI="#Religion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stark"/>
+        <Class IRI="#House"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wolf"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Woman"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Brandon_The_Builder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Brandon_The_Builder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Woman"/>
+        <NamedIndividual IRI="#Brandon_The_Builder_Wife"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Brandon_The_Builder_Wife"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Woman"/>
+        <NamedIndividual IRI="#Catelyn"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Catelyn"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Eddard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Eddard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Hoster_Tully"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Robb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Robb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Stark"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_founder_of"/>
+        <NamedIndividual IRI="#Brandon_The_Builder"/>
+        <NamedIndividual IRI="#Stark"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_married_to"/>
+        <NamedIndividual IRI="#Brandon_The_Builder"/>
+        <NamedIndividual IRI="#Brandon_The_Builder_Wife"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_child_of"/>
+        <NamedIndividual IRI="#Catelyn"/>
+        <NamedIndividual IRI="#Hoster_Tully"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_married_to"/>
+        <NamedIndividual IRI="#Catelyn"/>
+        <NamedIndividual IRI="#Eddard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_child_of"/>
+        <NamedIndividual IRI="#Eddard"/>
+        <NamedIndividual IRI="#Brandon_The_Builder_Wife"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_child_of"/>
+        <NamedIndividual IRI="#Eddard"/>
+        <NamedIndividual IRI="#Brandon_The_Builder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_child_of"/>
+        <NamedIndividual IRI="#Robb"/>
+        <NamedIndividual IRI="#Catelyn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_child_of"/>
+        <NamedIndividual IRI="#Robb"/>
+        <NamedIndividual IRI="#Eddard"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_father_of"/>
+        <ObjectProperty IRI="#is_parent_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_mother_of"/>
+        <ObjectProperty IRI="#is_parent_of"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#is_parent_of"/>
+        <ObjectProperty IRI="#is_child_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#was_founded_by"/>
+        <ObjectProperty IRI="#is_founder_of"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#is_married_to"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#believes_in"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongs_to_house"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#can_tame"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#can_warg_into"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#belongs_to_house"/>
+            <Class IRI="#Stark"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#cant_contract"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_child_of"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_father_of"/>
+        <Class IRI="#Man"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_founder_of"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_lord_of"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_married_to"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_mother_of"/>
+        <Class IRI="#Woman"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_parent_of"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#was_founded_by"/>
+        <Class IRI="#House"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#believes_in"/>
+        <Class IRI="#Religion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongs_to_house"/>
+        <Class IRI="#House"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#can_tame"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Animal"/>
+            <ObjectComplementOf>
+                <Class IRI="#Sentient"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#can_warg_into"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#cant_contract"/>
+        <Class IRI="#Disease"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_child_of"/>
+        <ObjectUnionOf>
+            <Class IRI="#Man"/>
+            <Class IRI="#Woman"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_father_of"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_founder_of"/>
+        <Class IRI="#House"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_lord_of"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_married_to"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_mother_of"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_parent_of"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#was_founded_by"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#is_father_of"/>
+        <ObjectProperty IRI="#is_mother_of"/>
+    </DisjointObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#is_child_of"/>
+            <ObjectProperty IRI="#belongs_to_house"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#belongs_to_house"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#is_founder_of"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#belongs_to_house"/>
+    </SubObjectPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#is_warg"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#belongs_to_house"/>
+            <Class IRI="#Stark"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#is_warg"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
