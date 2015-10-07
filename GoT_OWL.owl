@@ -31,6 +31,9 @@
         <Class IRI="#Dragon"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#DragonTamer"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Drowned_God"/>
     </Declaration>
     <Declaration>
@@ -61,7 +64,19 @@
         <Class IRI="#Sentient"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Skinchanger"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Stark"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Targaryen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Traits"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tully"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Wolf"/>
@@ -109,13 +124,34 @@
         <ObjectProperty IRI="#is_parent_of"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#is_tamed_by"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#was_founded_by"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#breathes_fire"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#can_fly"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_scales"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#is_dead"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#is_warg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Aenar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Aerys_II"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bran"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Brandon_The_Builder"/>
@@ -127,10 +163,25 @@
         <NamedIndividual IRI="#Catelyn"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Daenerys"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Drogon"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Eddard"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Ghost"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Hoster_Tully"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rhaego"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rhaena"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Robb"/>
@@ -138,6 +189,36 @@
     <Declaration>
         <NamedIndividual IRI="#Stark"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Summer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Targaryen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tully"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Dragon"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#breathes_fire"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Dragon"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#can_fly"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Dragon"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_scales"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Man"/>
         <ObjectUnionOf>
@@ -156,6 +237,29 @@
         <Class IRI="#Sentient"/>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Stark"/>
+        <ObjectUnionOf>
+            <Class IRI="#Skinchanger"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_child_of"/>
+                <Class IRI="#Stark"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Targaryen"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#is_child_of"/>
+                <Class IRI="#Targaryen"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#cant_contract"/>
+                <Class IRI="#Greyscale"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Woman"/>
         <ObjectUnionOf>
             <ObjectSomeValuesFrom>
@@ -171,6 +275,10 @@
     <SubClassOf>
         <Class IRI="#Dragon"/>
         <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DragonTamer"/>
+        <Class IRI="#Traits"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Drowned_God"/>
@@ -197,7 +305,19 @@
         <Class IRI="#Religion"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Skinchanger"/>
+        <Class IRI="#Traits"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Stark"/>
+        <Class IRI="#House"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Targaryen"/>
+        <Class IRI="#House"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tully"/>
         <Class IRI="#House"/>
     </SubClassOf>
     <SubClassOf>
@@ -210,6 +330,34 @@
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Aenar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Targaryen"/>
+        <NamedIndividual IRI="#Aenar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Aenar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Aerys_II"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Aerys_II"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Bran"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Brandon_The_Builder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Stark"/>
         <NamedIndividual IRI="#Brandon_The_Builder"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -233,18 +381,46 @@
         <NamedIndividual IRI="#Catelyn"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Woman"/>
+        <NamedIndividual IRI="#Daenerys"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Daenerys"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Drogon"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Man"/>
         <NamedIndividual IRI="#Eddard"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="owl:Thing"/>
         <NamedIndividual IRI="#Eddard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Ghost"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="owl:Thing"/>
         <NamedIndividual IRI="#Hoster_Tully"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Rhaego"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Woman"/>
+        <NamedIndividual IRI="#Rhaena"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Rhaena"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Man"/>
         <NamedIndividual IRI="#Robb"/>
     </ClassAssertion>
@@ -256,10 +432,46 @@
         <Class abbreviatedIRI="owl:Thing"/>
         <NamedIndividual IRI="#Stark"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Summer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Targaryen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Tully"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#Drogon"/>
+        <NamedIndividual IRI="#Rhaego"/>
+    </SameIndividual>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#is_founder_of"/>
-        <NamedIndividual IRI="#Brandon_The_Builder"/>
-        <NamedIndividual IRI="#Stark"/>
+        <ObjectProperty IRI="#is_child_of"/>
+        <NamedIndividual IRI="#Aerys_II"/>
+        <NamedIndividual IRI="#Aenar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_married_to"/>
+        <NamedIndividual IRI="#Aerys_II"/>
+        <NamedIndividual IRI="#Rhaena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#can_warg_into"/>
+        <NamedIndividual IRI="#Bran"/>
+        <NamedIndividual IRI="#Summer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_child_of"/>
+        <NamedIndividual IRI="#Bran"/>
+        <NamedIndividual IRI="#Eddard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_child_of"/>
+        <NamedIndividual IRI="#Bran"/>
+        <NamedIndividual IRI="#Catelyn"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#is_married_to"/>
@@ -277,6 +489,11 @@
         <NamedIndividual IRI="#Eddard"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#can_tame"/>
+        <NamedIndividual IRI="#Daenerys"/>
+        <NamedIndividual IRI="#Drogon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#is_child_of"/>
         <NamedIndividual IRI="#Eddard"/>
         <NamedIndividual IRI="#Brandon_The_Builder_Wife"/>
@@ -285,6 +502,11 @@
         <ObjectProperty IRI="#is_child_of"/>
         <NamedIndividual IRI="#Eddard"/>
         <NamedIndividual IRI="#Brandon_The_Builder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#can_warg_into"/>
+        <NamedIndividual IRI="#Robb"/>
+        <NamedIndividual IRI="#Ghost"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#is_child_of"/>
@@ -296,6 +518,21 @@
         <NamedIndividual IRI="#Robb"/>
         <NamedIndividual IRI="#Eddard"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#breathes_fire"/>
+        <NamedIndividual IRI="#Drogon"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#can_fly"/>
+        <NamedIndividual IRI="#Drogon"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_scales"/>
+        <NamedIndividual IRI="#Drogon"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#is_father_of"/>
         <ObjectProperty IRI="#is_parent_of"/>
@@ -304,6 +541,10 @@
         <ObjectProperty IRI="#is_mother_of"/>
         <ObjectProperty IRI="#is_parent_of"/>
     </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#is_tamed_by"/>
+        <ObjectProperty IRI="#can_tame"/>
+    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#is_parent_of"/>
         <ObjectProperty IRI="#is_child_of"/>
@@ -325,14 +566,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#can_tame"/>
-        <Class IRI="#Person"/>
+        <Class IRI="#Targaryen"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#can_warg_into"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#belongs_to_house"/>
-            <Class IRI="#Stark"/>
-        </ObjectSomeValuesFrom>
+        <Class IRI="#Skinchanger"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#cant_contract"/>
@@ -367,6 +605,10 @@
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_tamed_by"/>
+        <Class IRI="#Dragon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#was_founded_by"/>
         <Class IRI="#House"/>
     </ObjectPropertyDomain>
@@ -380,12 +622,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#can_tame"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Animal"/>
-            <ObjectComplementOf>
-                <Class IRI="#Sentient"/>
-            </ObjectComplementOf>
-        </ObjectIntersectionOf>
+        <Class IRI="#Dragon"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#can_warg_into"/>
@@ -427,6 +664,10 @@
         <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_tamed_by"/>
+        <Class IRI="#Targaryen"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#was_founded_by"/>
         <Class IRI="#Person"/>
     </ObjectPropertyRange>
@@ -454,6 +695,18 @@
             <Class IRI="#Stark"/>
         </ObjectSomeValuesFrom>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#breathes_fire"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#can_fly"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_scales"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#is_warg"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
