@@ -25,16 +25,10 @@
         <Class IRI="#Animal"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Disease"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Dragon"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DragonTamer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Drowned_God"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Greyscale"/>
@@ -46,19 +40,10 @@
         <Class IRI="#Man"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Old_Gods"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Person"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Place"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Religion"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Rhllor"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sentient"/>
@@ -97,7 +82,7 @@
         <ObjectProperty IRI="#can_warg_into"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#cant_contract"/>
+        <ObjectProperty IRI="#cant_contract_greyscale"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#is_bastard_of"/>
@@ -198,6 +183,9 @@
     <Declaration>
         <NamedIndividual IRI="#Tully"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Winterfell"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="#Dragon"/>
         <DataSomeValuesFrom>
@@ -248,16 +236,13 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Targaryen"/>
-        <ObjectIntersectionOf>
+        <ObjectUnionOf>
+            <Class IRI="#DragonTamer"/>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#is_child_of"/>
                 <Class IRI="#Targaryen"/>
             </ObjectSomeValuesFrom>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="#cant_contract"/>
-                <Class IRI="#Greyscale"/>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
+        </ObjectUnionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Woman"/>
@@ -281,28 +266,12 @@
         <Class IRI="#Traits"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Drowned_God"/>
-        <Class IRI="#Religion"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Greyscale"/>
-        <Class IRI="#Disease"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Man"/>
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Old_Gods"/>
-        <Class IRI="#Religion"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Person"/>
         <Class IRI="#Animal"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Rhllor"/>
-        <Class IRI="#Religion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Skinchanger"/>
@@ -402,15 +371,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="owl:Thing"/>
-        <NamedIndividual IRI="#Ghost"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="owl:Thing"/>
         <NamedIndividual IRI="#Hoster_Tully"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="owl:Thing"/>
-        <NamedIndividual IRI="#Rhaego"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Woman"/>
@@ -444,10 +405,10 @@
         <Class abbreviatedIRI="owl:Thing"/>
         <NamedIndividual IRI="#Tully"/>
     </ClassAssertion>
-    <SameIndividual>
-        <NamedIndividual IRI="#Drogon"/>
-        <NamedIndividual IRI="#Rhaego"/>
-    </SameIndividual>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Winterfell"/>
+    </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#is_child_of"/>
         <NamedIndividual IRI="#Aerys_II"/>
@@ -495,6 +456,11 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#is_child_of"/>
+        <NamedIndividual IRI="#Daenerys"/>
+        <NamedIndividual IRI="#Aerys_II"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_child_of"/>
         <NamedIndividual IRI="#Eddard"/>
         <NamedIndividual IRI="#Brandon_The_Builder_Wife"/>
     </ObjectPropertyAssertion>
@@ -504,14 +470,9 @@
         <NamedIndividual IRI="#Brandon_The_Builder"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#can_warg_into"/>
-        <NamedIndividual IRI="#Robb"/>
-        <NamedIndividual IRI="#Ghost"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#is_child_of"/>
-        <NamedIndividual IRI="#Robb"/>
-        <NamedIndividual IRI="#Catelyn"/>
+        <ObjectProperty IRI="#is_lord_of"/>
+        <NamedIndividual IRI="#Eddard"/>
+        <NamedIndividual IRI="#Winterfell"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#is_child_of"/>
@@ -573,8 +534,8 @@
         <Class IRI="#Skinchanger"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#cant_contract"/>
-        <Class IRI="#Person"/>
+        <ObjectProperty IRI="#cant_contract_greyscale"/>
+        <Class IRI="#Targaryen"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#is_child_of"/>
@@ -613,10 +574,6 @@
         <Class IRI="#House"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#believes_in"/>
-        <Class IRI="#Religion"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#belongs_to_house"/>
         <Class IRI="#House"/>
     </ObjectPropertyRange>
@@ -629,8 +586,8 @@
         <Class IRI="#Animal"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#cant_contract"/>
-        <Class IRI="#Disease"/>
+        <ObjectProperty IRI="#cant_contract_greyscale"/>
+        <Class IRI="#Greyscale"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#is_child_of"/>
@@ -681,6 +638,20 @@
             <ObjectProperty IRI="#belongs_to_house"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#belongs_to_house"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#is_child_of"/>
+            <ObjectProperty IRI="#cant_contract_greyscale"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#cant_contract_greyscale"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#is_child_of"/>
+            <ObjectProperty IRI="#is_married_to"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#is_child_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectPropertyChain>
